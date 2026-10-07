@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 36" fill="none" class="gold-flourish">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C59B4E" stop-opacity="0.1"/>
+      <stop offset="25%" stop-color="#C59B4E" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#E2C988"/>
+      <stop offset="75%" stop-color="#C59B4E" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#C59B4E" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="goldSolid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B88738"/>
+      <stop offset="50%" stop-color="#E8D196"/>
+      <stop offset="100%" stop-color="#A57326"/>
+    </linearGradient>
+  </defs>
+  <!-- Center rosette/diamond -->
+  <path d="M150 10 L155 18 L150 26 L145 18 Z" fill="url(#goldSolid)"/>
+  <circle cx="150" cy="18" r="2.5" fill="#FAF6F0"/>
+  <!-- Center side dots -->
+  <circle cx="140" cy="18" r="2" fill="url(#goldSolid)"/>
+  <circle cx="160" cy="18" r="2" fill="url(#goldSolid)"/>
+  <!-- Left flourish curves -->
+  <path d="M136 18 C128 14 122 10 114 14 C108 17 112 23 118 21 C122 19 120 16 116 16" stroke="url(#goldSolid)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+  <path d="M110 18 C95 18 80 16 65 18 C50 20 35 18 10 18" stroke="url(#goldGrad)" stroke-width="1" stroke-linecap="round"/>
+  <!-- Right flourish curves -->
+  <path d="M164 18 C172 14 178 10 186 14 C192 17 188 23 182 21 C178 19 180 16 184 16" stroke="url(#goldSolid)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+  <path d="M190 18 C205 18 220 16 235 18 C250 20 265 18 290 18" stroke="url(#goldGrad)" stroke-width="1" stroke-linecap="round"/>
+  <!-- Leaf accents -->
+  <path d="M132 15 C129 12 125 12 122 14 C125 16 129 16 132 15 Z" fill="url(#goldSolid)"/>
+  <path d="M168 15 C171 12 175 12 178 14 C175 16 171 16 168 15 Z" fill="url(#goldSolid)"/>
+</svg>

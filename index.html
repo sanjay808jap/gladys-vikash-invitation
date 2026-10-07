@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Gladys Evangeline &amp; Vikash Varma | Wedding Invitation</title>
+  
+  <!-- WhatsApp & Social Media Preview Cards (Open Graph) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wedding Invitation: Gladys Evangeline &amp; Vikash Varma" />
+  <meta property="og:description" content="Together with our families, you are warmly invited to celebrate the holy matrimony on 16 &amp; 17 October 2026 at Cantonment Baptist Church, Vizianagaram." />
+  <meta property="og:image" content="assets/images/floral-geometric-frame.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wedding Invitation: Gladys Evangeline &amp; Vikash Varma" />
+  <meta name="twitter:description" content="Holy Matrimony celebration on 16 &amp; 17 October 2026 in Vizianagaram." />
+  <meta name="theme-color" content="#FAF6F0" />
+
+  <!-- Fonts: Classical Serif, Roman Display & Flowing Calligraphy -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body class="lock-scroll">
+
+  <!-- ======================================================================
+       1. IMMERSIVE OPENING ENVELOPE / COVER
+       ====================================================================== -->
+  <div class="envelope-overlay" id="envelopeOverlay" aria-modal="true" role="dialog" aria-label="Wedding Invitation Envelope">
+    <div class="envelope-stage">
+      <div class="envelope-card">
+        <!-- Corner Floral Embellishments for Envelope Card -->
+        <img src="assets/images/corner-floral.jpg" alt="" class="card-floral-corner card-floral-tl envelope-floral-corner" aria-hidden="true" />
+        <img src="assets/images/corner-floral.jpg" alt="" class="card-floral-corner card-floral-tr envelope-floral-corner" aria-hidden="true" />
+
+        <!-- Delicate Christian Gold Cross -->
+        <div class="envelope-header-cross">
+          <img src="assets/icons/cross-ornament.svg" alt="Cross" width="24" height="30" />
+        </div>
+
+        <p class="envelope-tagline">YOU ARE CORDIALLY INVITED</p>
+        <p class="envelope-subtext">to celebrate the wedding of</p>
+
+        <h1 class="envelope-names">
+          Gladys Evangeline
+          <span class="envelope-ampersand">&amp;</span>
+          Vikash Varma
+        </h1>
+
+        <div class="envelope-date-preview">
+          16 &amp; 17 OCTOBER 2026 &bull; VIZIANAGARAM
+        </div>
+
+        <!-- 3D Antique Gold Wax Seal Trigger -->
+        <div class="wax-seal-wrapper" id="waxSealTrigger" title="Click to open invitation" role="button" tabindex="0" aria-label="Open wedding invitation">
+          <img src="assets/images/wax-seal.jpg" alt="Wax seal monogram G and V" class="wax-seal-img" />
+        </div>
+
+        <div>
+          <button class="btn-open-invitation" id="openInvitationBtn" aria-label="Open the formal wedding invitation">
+            OPEN INVITATION
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Non-blocking Container for YouTube Background Music API -->
+  <div id="ytAudioPlayer" style="position:fixed;bottom:-300px;left:-300px;width:10px;height:10px;opacity:0.01;pointer-events:none;" aria-hidden="true"></div>
+
+  <!-- ======================================================================
+       FLOATING LUXURY MUSIC CONTROLLER
+       ====================================================================== -->
+  <button class="music-toggle-floating" id="musicToggle" aria-label="Toggle background worship music" aria-pressed="false" title="Goodness of God — Bethel Music">
+    <div class="music-disc">
+      <img src="assets/icons/music.svg" alt="Music" width="14" height="14" />
+    </div>
+    <div class="music-bars" id="musicWave">
+      <span class="music-bar"></span>
+      <span class="music-bar"></span>
+      <span class="music-bar"></span>
+    </div>
+    <span class="music-label" id="musicStatusText">Music: Ready</span>
+  </button>
+
+  <!-- ======================================================================
+       MAIN DIGITAL INVITATION
+       ====================================================================== -->
+  <main class="invitation-wrapper" id="mainInvitation">
+    <div class="invitation-main-card">
+      
+      <!-- Corner Floral Bouquets (Matching Reference Card) -->
+      <img src="assets/images/corner-floral.jpg" alt="" class="card-floral-corner card-floral-tl" aria-hidden="true" />
+      <img src="assets/images/corner-floral.jpg" alt="" class="card-floral-corner card-floral-tr" aria-hidden="true" />
+      <img src="assets/images/corner-floral.jpg" alt="" class="card-floral-corner card-floral-bl" aria-hidden="true" />
+      <img src="assets/images/corner-floral.jpg" alt="" class="card-floral-corner card-floral-br" aria-hidden="true" />
+
+      <!-- Stationery Hairline Borders & Gold Corner Flourishes -->
+      <div class="invitation-border-frame" aria-hidden="true">
+        <img src="assets/icons/corner-ornament.svg" class="corner-flourish corner-top-left" alt="" />
+        <img src="assets/icons/corner-ornament.svg" class="corner-flourish corner-top-right" alt="" />
+        <img src="assets/icons/corner-ornament.svg" class="corner-flourish corner-bottom-left" alt="" />
+        <img src="assets/icons/corner-ornament.svg" class="corner-flourish corner-bottom-right" alt="" />
+      </div>
+
+      <!-- Top Scripture -->
+      <header class="invitation-top-meta fade-up">
+        <div class="invitation-top-scripture">
+          <p class="scripture-quote">
+            &ldquo;The Lord is good to everyone. He showers compassion on all his creation.&rdquo;
+            <span class="scripture-ref">&mdash; Psalms 145:9</span>
+          </p>
+        </div>
+
+        <!-- Gold Flourish Divider -->
+        <div class="gold-divider-container" aria-hidden="true">
+          <img src="assets/icons/divider-ornament.svg" class="gold-flourish-img" alt="" />
+        </div>
+
+        <h2 class="invitation-main-heading">
+          <span class="script-lead">Wedding</span>
+          INVITATION
+        </h2>
+
+        <!-- Gold Flourish Divider -->
+        <div class="gold-divider-container" aria-hidden="true">
+          <img src="assets/icons/divider-ornament.svg" class="gold-flourish-img" alt="" />
+        </div>
+      </header>
+
+      <!-- Formal Solicit / Invitation Message -->
+      <section class="invitation-formal-note fade-up delay-1">
+        <p>
+          With the blessings of family and loved ones, you are warmly invited to share in the joy of this special celebration.
+        </p>
+      </section>
+
+      <!-- Centerpiece: Couple Names & Botanical Geometric Frame -->
+      <section class="hero-names-section fade-up delay-2">
+        <div class="hero-frame-container floral-breathe">
+          <!-- Botanical Geometric Artwork -->
+          <img 
+            src="assets/images/floral-geometric-frame.jpg" 
+            alt="Blush pink peonies and gold geometric frame" 
+            class="hero-frame-bg" 
+          />
+
+          <!-- Couple's Names Inside the Gold Polygon Frame -->
+          <div class="hero-names-inner">
+            <h1 class="couple-name">Gladys Evangeline</h1>
+            <span class="name-connector">with</span>
+            <h1 class="couple-name">Vikash Varma</h1>
+          </div>
+        </div>
+
+        <!-- Prominent Proverbs 31:25 Scripture -->
+        <div class="hero-verse">
+          <p class="scripture-quote">
+            &ldquo;She is clothed with strength and dignity; she can laugh at the days to come.&rdquo;
+            <span class="scripture-ref">&mdash; Proverbs 31:25</span>
+          </p>
+        </div>
+
+        <div class="ornamental-line" aria-hidden="true">
+          <span class="ornamental-line-gem"></span>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           CEREMONIES (Betrothal & Wedding Ceremony)
+           ================================================================== -->
+      <section class="events-section" aria-label="Wedding Events and Ceremonies">
+        <h3 class="events-section-title fade-up">PROGRAMME OF EVENTS</h3>
+
+        <div class="event-cards-container">
+          
+          <!-- Event 1: Betrothal Ceremony -->
+          <article class="ceremony-card fade-up">
+            <span class="ceremony-badge">SACRED PROMISE</span>
+            <h4 class="ceremony-title">BETROTHAL CEREMONY</h4>
+            <p class="ceremony-subtitle">Thanksgiving &amp; Engagement Service</p>
+
+            <!-- Traditional Date Block (Matching Reference Card) -->
+            <div class="date-month-header">
+              <span class="date-line-flourish"></span>
+              <span class="date-month-name">OCTOBER</span>
+              <span class="date-line-flourish"></span>
+            </div>
+            <div class="card-date-layout">
+              <div class="date-side-col">FRIDAY</div>
+              <div class="date-center-num">16</div>
+              <div class="date-side-col">AT 7:00 PM</div>
+            </div>
+            <div class="date-year-label">2026</div>
+
+            <p class="event-venue-text">
+              @ CANTONMENT BAPTIST CHURCH<br />COMMUNITY HALL, VIZIANAGARAM
+            </p>
+
+            <p class="event-reception-note">DINNER FOLLOWS</p>
+
+            <button class="btn-calendar" id="addBetrothalCalBtn" aria-label="Add Betrothal Ceremony to Calendar">
+              <img src="assets/icons/calendar.svg" alt="" width="14" height="14" />
+              ADD TO CALENDAR
+            </button>
+          </article>
+
+          <!-- Event 2: Wedding Ceremony (Primary Event) -->
+          <article class="ceremony-card wedding-primary fade-up delay-1">
+            <span class="ceremony-badge" style="background: var(--gold-dark);">THE HOLY MATRIMONY</span>
+            <h4 class="ceremony-title" style="font-size: clamp(1.4rem, 4vw, 1.85rem);">WEDDING CEREMONY</h4>
+            <p class="ceremony-subtitle">Solemnisation of Holy Matrimony</p>
+
+            <!-- Traditional Date Block (Matching Reference Card) -->
+            <div class="date-month-header">
+              <span class="date-line-flourish"></span>
+              <span class="date-month-name">OCTOBER</span>
+              <span class="date-line-flourish"></span>
+            </div>
+            <div class="card-date-layout">
+              <div class="date-side-col">SATURDAY</div>
+              <div class="date-center-num" style="color: var(--color-burgundy);">17</div>
+              <div class="date-side-col">AT 10:00 AM</div>
+            </div>
+            <div class="date-year-label">2026</div>
+
+            <p class="event-venue-text" style="color: var(--color-burgundy);">
+              @ CANTONMENT BAPTIST CHURCH<br />VIZIANAGARAM
+            </p>
+
+            <p class="event-reception-note" style="font-size: 0.85rem;">LUNCH FOLLOWS</p>
+
+            <button class="btn-calendar" id="addWeddingCalBtn" style="border-color: var(--gold-primary); background: #FAF5EB;" aria-label="Add Wedding Ceremony to Calendar">
+              <img src="assets/icons/calendar.svg" alt="" width="14" height="14" />
+              ADD TO CALENDAR
+            </button>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SPECIAL GUESTS (Formal Wedding Stationery Layout)
+           ================================================================== -->
+      <section class="special-guests-section fade-up">
+        <h3 class="guests-section-heading">WITH THE HONOUR OF OUR SPECIAL GUESTS</h3>
+
+        <div class="guests-grid">
+          <!-- Guest of Honour -->
+          <div class="guest-card">
+            <p class="guest-category">GUEST OF HONOUR</p>
+            <h4 class="guest-name">Sis. Shantha Kumari Mondithoka</h4>
+            <p class="guest-role">
+              Dean of Academics<br />
+              <strong>HITHA, Hyderabad</strong>
+            </p>
+          </div>
+
+          <!-- Chief Guest -->
+          <div class="guest-card">
+            <p class="guest-category">CHIEF GUEST</p>
+            <h4 class="guest-name">Rev. Dr. M. Vijaya Kumar</h4>
+            <p class="guest-role">
+              President<br />
+              <strong>CBCNC</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="gold-divider-container" style="margin-top: 2.5rem;" aria-hidden="true">
+          <img src="assets/icons/divider-ornament.svg" class="gold-flourish-img" alt="" />
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SCRIPTURE / BLESSING (Calm Breathing Room)
+           ================================================================== -->
+      <section class="scripture-breathing-section fade-up">
+        <div class="scripture-card-inner">
+          <p class="scripture-verse-prominent">
+            &ldquo;The Lord is good to everyone.<br />
+            He showers compassion on all his creation.&rdquo;
+          </p>
+          <span class="scripture-ref" style="font-size: 0.8rem;">&mdash; PSALMS 145:9</span>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           VENUE & DIRECTIONS
+           ================================================================== -->
+      <section class="venue-section fade-up" aria-label="Venue and directions">
+        <div class="venue-card">
+          <h3 class="events-section-title" style="margin-bottom: 0.75rem;">CEREMONY VENUE</h3>
+          <h4 class="venue-card-title">CANTONMENT BAPTIST CHURCH</h4>
+          <p class="venue-card-city">Vizianagaram, Andhra Pradesh</p>
+
+          <!-- Clean Map Preview Card -->
+          <div class="map-embed-wrapper">
+            <iframe 
+              title="Cantonment Baptist Church Location Map" 
+              src="https://maps.google.com/maps?q=Cantonment+Baptist+Church+Vizianagaram&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <a 
+            id="viewMapBtn" 
+            href="https://www.google.com/maps/search/?api=1&query=Cantonment+Baptist+Church+Vizianagaram" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-view-map"
+          >
+            <img src="assets/icons/location.svg" alt="" width="16" height="16" />
+            VIEW LOCATION ON GOOGLE MAPS
+          </a>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           CELEBRATION COUNTDOWN
+           ================================================================== -->
+      <section class="countdown-section fade-up">
+        <h4 class="countdown-title">COUNTING DOWN TO THE HOLY MATRIMONY</h4>
+        <div class="countdown-grid" aria-label="Time remaining until wedding">
+          <div class="countdown-unit">
+            <div class="countdown-num" id="countDays">--</div>
+            <div class="countdown-label">DAYS</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="countdown-num" id="countHours">--</div>
+            <div class="countdown-label">HOURS</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="countdown-num" id="countMins">--</div>
+            <div class="countdown-label">MINUTES</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="countdown-num" id="countSecs">--</div>
+            <div class="countdown-label">SECONDS</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           FINAL SECTION: WITH LOVE & BLESSINGS
+           ================================================================== -->
+      <footer class="invitation-footer-section fade-up">
+        <!-- Delicate Botanical Garland Header -->
+        <div style="max-width: 320px; margin: 0 auto 1.5rem; mix-blend-mode: multiply; opacity: 0.85;">
+          <img src="assets/images/floral-garland.jpg" alt="" class="gold-glow" style="width: 100%; height: auto;" />
+        </div>
+
+        <p class="footer-presence-text">
+          Your presence will make this celebration even more special.
+        </p>
+
+        <p class="footer-salutation">WITH LOVE &amp; BLESSINGS</p>
+
+        <h3 class="footer-couple-names">
+          Gladys Evangeline
+          <span style="font-family: var(--font-serif); font-size: 1.2rem; display: block; margin: 0.2rem 0; color: var(--gold-primary); font-style: italic;">&amp;</span>
+          Vikash Varma
+        </h3>
+
+        <!-- Calligraphy Blessing (from Original Card) -->
+        <p style="font-family: var(--font-script); font-size: 1.8rem; color: var(--color-espresso); margin: 0.5rem 0 1rem;">
+          Best wishes &ndash; near and dear
+        </p>
+
+        <div class="gold-divider-container" aria-hidden="true">
+          <img src="assets/icons/divider-ornament.svg" class="gold-flourish-img" alt="" />
+        </div>
+
+        <!-- Sharing Actions (WhatsApp Priority) -->
+        <div class="share-actions-group">
+          <a href="#" id="whatsappShareBtn" class="btn-whatsapp-share" aria-label="Share invitation on WhatsApp">
+            <img src="assets/icons/whatsapp.svg" alt="" width="18" height="18" />
+            SHARE ON WHATSAPP
+          </a>
+
+          <button id="copyLinkBtn" class="btn-copy-link" aria-label="Copy invitation link">
+            COPY INVITATION LINK
+          </button>
+        </div>
+
+        <!-- Replay envelope experience -->
+        <div style="margin-top: 2rem;">
+          <button id="reopenEnvelopeBtn" style="font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); text-decoration: underline; opacity: 0.75; cursor: pointer;">
+            View Envelope Again
+          </button>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- Toast Notification for Link Copy -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/audio-fallback.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

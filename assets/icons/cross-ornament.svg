@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 50" fill="none">
+  <defs>
+    <linearGradient id="crossGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C59B4E"/>
+      <stop offset="50%" stop-color="#F3E5AB"/>
+      <stop offset="100%" stop-color="#9E6F22"/>
+    </linearGradient>
+  </defs>
+  <!-- Vertical beam -->
+  <path d="M19 4 L21 4 L21 46 L19 46 Z" fill="url(#crossGold)"/>
+  <!-- Horizontal beam -->
+  <path d="M9 16 L31 16 L31 18 L9 18 Z" fill="url(#crossGold)"/>
+  <!-- Decorative finials -->
+  <circle cx="20" cy="4" r="2" fill="url(#crossGold)"/>
+  <circle cx="20" cy="46" r="2" fill="url(#crossGold)"/>
+  <circle cx="9" cy="17" r="2" fill="url(#crossGold)"/>
+  <circle cx="31" cy="17" r="2" fill="url(#crossGold)"/>
+  <!-- Center radiant halo -->
+  <circle cx="20" cy="17" r="5" stroke="url(#crossGold)" stroke-width="0.8" fill="none"/>
+  <circle cx="20" cy="17" r="1.5" fill="url(#crossGold)"/>
+</svg>
