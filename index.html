@@ -59,37 +59,39 @@
 
         <!-- Layer 4: Front Pocket Folds (Left, Right, Bottom triangular folds) -->
         <div class="envelope-front-pocket" aria-hidden="true">
-          <svg class="envelope-pocket-svg" viewBox="0 0 540 370" preserveAspectRatio="none">
+          <svg class="envelope-pocket-svg" viewBox="0 0 540 340" preserveAspectRatio="none">
             <defs>
               <linearGradient id="pocketShade" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#FCF5E6"/>
-                <stop offset="100%" stop-color="#EEDEB8"/>
+                <stop offset="0%" stop-color="#FCF6E9"/>
+                <stop offset="50%" stop-color="#F8EED8"/>
+                <stop offset="100%" stop-color="#EEDCB4"/>
               </linearGradient>
               <linearGradient id="foldGold" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#B8892F" stop-opacity="0.25"/>
-                <stop offset="50%" stop-color="#E0C98A" stop-opacity="0.65"/>
-                <stop offset="100%" stop-color="#B8892F" stop-opacity="0.25"/>
+                <stop offset="0%" stop-color="#B8892F" stop-opacity="0.3"/>
+                <stop offset="50%" stop-color="#E0C98A" stop-opacity="0.75"/>
+                <stop offset="100%" stop-color="#B8892F" stop-opacity="0.3"/>
               </linearGradient>
               <filter id="pocketShadow" x="-10%" y="-10%" width="120%" height="120%">
                 <feDropShadow dx="0" dy="-4" stdDeviation="5" flood-color="#2D1F18" flood-opacity="0.14"/>
               </filter>
             </defs>
             <!-- Left Fold -->
-            <path d="M0,0 L270,185 L0,370 Z" fill="#F7EED8" stroke="url(#foldGold)" stroke-width="0.75"/>
+            <path d="M0,0 L270,170 L0,340 Z" fill="#F8EED8" stroke="url(#foldGold)" stroke-width="0.8"/>
             <!-- Right Fold -->
-            <path d="M540,0 L270,185 L540,370 Z" fill="#F4E6CB" stroke="url(#foldGold)" stroke-width="0.75"/>
+            <path d="M540,0 L270,170 L540,340 Z" fill="#F5E8CE" stroke="url(#foldGold)" stroke-width="0.8"/>
             <!-- Bottom Triangular Fold (covers front) -->
-            <path d="M0,370 L270,180 L540,370 Z" fill="url(#pocketShade)" filter="url(#pocketShadow)" stroke="url(#foldGold)" stroke-width="1"/>
-            <!-- Subtle gold hairline trim on bottom fold -->
-            <path d="M25,360 L270,195 L515,360" fill="none" stroke="rgba(184, 137, 47, 0.45)" stroke-width="0.8" stroke-dasharray="3, 2"/>
+            <path d="M0,340 L270,165 L540,340 Z" fill="url(#pocketShade)" filter="url(#pocketShadow)" stroke="url(#foldGold)" stroke-width="1"/>
+            <!-- Double gold foil hairline trim on bottom fold seams -->
+            <path d="M0,340 L270,165 L540,340" fill="none" stroke="rgba(196, 154, 69, 0.65)" stroke-width="0.8"/>
+            <path d="M14,335 L270,174 L526,335" fill="none" stroke="rgba(210, 179, 106, 0.45)" stroke-width="0.6"/>
           </svg>
 
-          <!-- Subtle Botanical Corner Touches on Envelope Front -->
-          <div class="envelope-botanical-accent left-botanical">
-            <img src="assets/images/corner-floral.jpg" alt="" />
+          <!-- Trailing Botanical Elements along Lower Seams from Envpic.png -->
+          <div class="envelope-botanical-accent pocket-botanical-left">
+            <img src="assets/images/pocket-floral-left.jpg" alt="" />
           </div>
-          <div class="envelope-botanical-accent right-botanical">
-            <img src="assets/images/corner-floral.jpg" alt="" />
+          <div class="envelope-botanical-accent pocket-botanical-right">
+            <img src="assets/images/pocket-floral-right.jpg" alt="" />
           </div>
 
           <!-- Addressed Envelope Face Typography -->
@@ -99,25 +101,39 @@
           </div>
         </div>
 
-        <!-- Layer 5: Envelope Top Triangular Flap (Pointed Flap Folding Down) -->
+        <!-- Layer 5: Envelope Top Flap with Beveled Shoulders and Florals from Envpic.png -->
         <div class="envelope-top-flap" id="envelopeTopFlap">
           <svg class="envelope-flap-svg" viewBox="0 0 540 215" preserveAspectRatio="none">
             <defs>
               <linearGradient id="flapGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#FCF5E6"/>
-                <stop offset="90%" stop-color="#F6EACF"/>
-                <stop offset="100%" stop-color="#EEDEB8"/>
+                <stop offset="0%" stop-color="#FFFDF9"/>
+                <stop offset="25%" stop-color="#FCF6E9"/>
+                <stop offset="85%" stop-color="#F7EBD1"/>
+                <stop offset="100%" stop-color="#EEDCB4"/>
+              </linearGradient>
+              <linearGradient id="flapGoldTrim" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#C49A45"/>
+                <stop offset="50%" stop-color="#F2DFAB"/>
+                <stop offset="100%" stop-color="#C49A45"/>
               </linearGradient>
               <filter id="flapEdgeGlow">
-                <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#241812" flood-opacity="0.3"/>
+                <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1E070D" flood-opacity="0.32"/>
               </filter>
             </defs>
-            <!-- Pointed flap down -->
-            <path d="M0,0 L270,210 L540,0 Z" fill="url(#flapGrad)" filter="url(#flapEdgeGlow)" stroke="#C49A45" stroke-width="0.8"/>
-            <!-- Inset gold foil dashed hairline -->
-            <path d="M25,6 L270,196 L515,6" fill="none" stroke="rgba(196, 154, 69, 0.6)" stroke-width="0.8"/>
-            <circle cx="270" cy="180" r="3" fill="#C49A45"/>
+            <!-- Flap outline with beveled shoulders matching Envpic.png -->
+            <path d="M0,0 L42,54 L270,205 L498,54 L540,0 Z" fill="url(#flapGrad)" filter="url(#flapEdgeGlow)" stroke="#C49A45" stroke-width="1"/>
+            <!-- Inset delicate champagne gold hairline -->
+            <path d="M12,4 L46,48 L270,197 L494,48 L528,4" fill="none" stroke="rgba(196, 154, 69, 0.75)" stroke-width="0.8"/>
+            <path d="M22,6 L48,44 L270,191 L492,44 L518,6" fill="none" stroke="rgba(210, 179, 106, 0.45)" stroke-width="0.5"/>
           </svg>
+
+          <!-- Flap Floral Sprays from Envpic.png -->
+          <div class="flap-floral-accent flap-floral-left" aria-hidden="true">
+            <img src="assets/images/flap-floral-left.jpg" alt="" />
+          </div>
+          <div class="flap-floral-accent flap-floral-right" aria-hidden="true">
+            <img src="assets/images/flap-floral-right.jpg" alt="" />
+          </div>
 
           <!-- Layer 6: Provided G&V Antique Gold Wax Seal (Sitting over flap apex) -->
           <div class="envelope-wax-seal" id="waxSealTrigger" role="button" tabindex="0" aria-label="Open wedding invitation by tapping wax seal" title="Tap wax seal to open invitation">
@@ -141,8 +157,8 @@
     </div>
   </div>
 
-  <!-- Audio Elements: Realistic Paper Rustle Sound & Hidden YouTube Audio Container -->
-  <audio id="paperRustleAudio" src="assets/audio/paper-rustle.wav" preload="auto"></audio>
+  <!-- Audio Elements: Realistic Envelope Sound & Hidden YouTube Audio Container -->
+  <audio id="paperRustleAudio" src="assets/audio/envsound.mp3" preload="auto"></audio>
   <div id="ytAudioPlayer" style="position:fixed;bottom:-300px;left:-300px;width:10px;height:10px;opacity:0.01;pointer-events:none;" aria-hidden="true"></div>
 
   <!-- ======================================================================
@@ -224,7 +240,7 @@
           <!-- Couple's Names Inside the Gold Polygon Frame -->
           <div class="hero-names-inner">
             <h2 class="couple-name">Gladys Evangeline</h2>
-            <span class="name-connector">with</span>
+            <span class="name-connector" aria-label="and">&amp;</span>
             <h2 class="couple-name">Vikash Varma</h2>
           </div>
         </div>

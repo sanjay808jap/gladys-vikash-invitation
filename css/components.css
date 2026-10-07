@@ -10,7 +10,7 @@
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: radial-gradient(circle at 50% 40%, #281D1A 0%, #150F0D 65%, #0A0706 100%);
+  background: radial-gradient(circle at 50% 40%, #2E0B16 0%, #1A050D 60%, #0B0205 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@
 .envelope-scene {
   perspective: 1600px;
   width: 100%;
-  max-width: 540px;
+  max-width: 560px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +39,7 @@
 .envelope-3d-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 540 / 360;
+  aspect-ratio: 540 / 340;
   transform-style: preserve-3d;
   border-radius: 6px;
   box-shadow: var(--shadow-envelope);
@@ -133,10 +133,11 @@
 .letter-slip-ampersand {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.1rem;
-  color: var(--gold-primary);
+  font-size: 1.25rem;
+  color: var(--gold-champagne);
   display: block;
   margin: 0.1rem 0;
+  line-height: 1;
 }
 
 .letter-slip-date {
@@ -173,32 +174,33 @@
   display: block;
 }
 
-/* Botanical Corners on Envelope Front */
+/* Botanical Accents on Envelope Front from Envpic.png */
 .envelope-botanical-accent {
   position: absolute;
-  width: 65px;
-  height: 65px;
-  mix-blend-mode: multiply;
-  opacity: 0.82;
   pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.92;
   z-index: 5;
 }
 
-.left-botanical {
+.pocket-botanical-left {
   bottom: 0;
   left: 0;
+  width: 82px;
+  max-width: 25%;
 }
 
-.right-botanical {
+.pocket-botanical-right {
   bottom: 0;
   right: 0;
-  transform: scaleX(-1);
+  width: 82px;
+  max-width: 25%;
 }
 
 /* Envelope Addressed Typography */
 .envelope-front-addressed {
   position: absolute;
-  bottom: 24px;
+  bottom: 22px;
   left: 0;
   right: 0;
   text-align: center;
@@ -222,13 +224,13 @@
   letter-spacing: 0.02em;
 }
 
-/* Layer 5: Envelope Top Triangular Flap */
+/* Layer 5: Envelope Top Flap with Beveled Geometry & Florals */
 .envelope-top-flap {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 58%;
+  height: 62%;
   transform-origin: top center;
   transform-style: preserve-3d;
   z-index: 7;
@@ -242,33 +244,53 @@
   display: block;
 }
 
+/* Flap Floral Sprays from Envpic.png */
+.flap-floral-accent {
+  position: absolute;
+  top: 0;
+  width: 44%;
+  max-width: 240px;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.96;
+  z-index: 8;
+}
+
+.flap-floral-left {
+  left: 0;
+}
+
+.flap-floral-right {
+  right: 0;
+}
+
 /* Layer 6: Golden G&V Wax Seal */
 .envelope-wax-seal {
   position: absolute;
-  top: 83%;
+  top: 92%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 82px;
-  height: 82px;
+  width: 92px;
+  height: 92px;
   cursor: pointer;
   z-index: 10;
   border-radius: 50%;
-  filter: drop-shadow(0 8px 16px rgba(45, 25, 15, 0.45));
+  filter: drop-shadow(0 10px 22px rgba(45, 12, 18, 0.52));
   transition: transform 0.35s var(--ease-luxury), filter 0.35s ease;
   pointer-events: auto;
 }
 
 @media (min-width: 600px) {
   .envelope-wax-seal {
-    width: 96px;
-    height: 96px;
-    top: 84%;
+    width: 108px;
+    height: 108px;
+    top: 93%;
   }
 }
 
 .envelope-wax-seal:hover {
   transform: translate(-50%, -50%) scale(1.05);
-  filter: drop-shadow(0 12px 24px rgba(184, 137, 47, 0.55));
+  filter: drop-shadow(0 14px 28px rgba(184, 137, 47, 0.65));
 }
 
 .wax-seal-graphic {
@@ -455,9 +477,9 @@
 
 .couple-name {
   font-family: var(--font-script);
-  font-size: clamp(1.9rem, 5.2vw, 3.3rem);
-  color: var(--color-burgundy);  /* Rich burgundy for strong focal contrast */
-  line-height: 1.18;
+  font-size: clamp(2.3rem, 6.2vw, 3.8rem);
+  color: var(--color-burgundy);  /* Rich burgundy #741C2B */
+  line-height: 1.12;
   display: block;
   text-shadow: 0 1px 2px rgba(255, 249, 234, 0.9);
 }
@@ -465,10 +487,11 @@
 .name-connector {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.25rem;
-  color: var(--gold-dark);
-  margin: 0.3rem 0;
+  font-size: clamp(1.4rem, 3.6vw, 1.95rem);
+  color: var(--gold-champagne);  /* Delicate champagne gold #D2B36A */
+  margin: 0.1rem 0;
   display: block;
+  line-height: 1;
 }
 
 .hero-verse-proverbs {
