@@ -98,8 +98,9 @@ const WEDDING_CONFIG = {
     title: "Goodness of God",
     artist: "Bethel Music ft. Jenn Johnson",
     youtubeVideoId: "n0FBb6hnwTo",
+    startTimeSeconds: 55,
     autoPlayOnOpen: true,
-    initialVolume: 75
+    initialVolume: 80
   },
 
   share: {

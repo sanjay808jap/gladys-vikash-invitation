@@ -1,55 +1,116 @@
 /* ==========================================================================
    Gladys Evangeline & Vikash Varma — Digital Wedding Invitation
-   Luxury Motion & Cinematic Animations
+   Cinematic Envelope Opening & Stationery Motion Choreography
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Envelope Cinematic Opening Transitions
+   Physical Envelope Opening Choreography
    -------------------------------------------------------------------------- */
-.envelope-overlay.opening .wax-seal-wrapper {
-  animation: sealBreak 0.7s forwards ease;
+
+/* Stage 1 & 2: Wax Seal Physical Reaction and Release */
+.envelope-viewport-overlay.opening .envelope-wax-seal {
+  animation: sealPhysicalRelease 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-.envelope-overlay.opening .envelope-card {
-  animation: envelopeOpen 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-}
-
-@keyframes sealBreak {
+@keyframes sealPhysicalRelease {
   0% {
-    transform: scale(1);
-    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    filter: drop-shadow(0 8px 16px rgba(45, 25, 15, 0.45));
+  }
+  20% {
+    transform: translate(-50%, -50%) scale(0.95) translateY(2px);
+    filter: drop-shadow(0 4px 8px rgba(45, 25, 15, 0.6));
   }
   50% {
-    transform: scale(1.15) rotate(5deg);
-    filter: drop-shadow(0 0 15px rgba(229, 208, 153, 0.8));
-    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.12) translateY(-12px) rotate(-4deg);
+    filter: drop-shadow(0 14px 28px rgba(184, 137, 47, 0.7));
+    opacity: 0.95;
   }
   100% {
-    transform: scale(1.3) translateY(-10px);
+    transform: translate(-50%, -50%) scale(1.22) translateY(-28px) rotate(-8deg);
+    filter: drop-shadow(0 20px 36px rgba(184, 137, 47, 0.4));
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Stage 3: Envelope Flap Physical 3D Unfold (Top Hinge) */
+.envelope-viewport-overlay.opening .envelope-top-flap {
+  animation: flapHingeOpen 1.1s cubic-bezier(0.25, 1, 0.5, 1) 0.35s forwards;
+}
+
+@keyframes flapHingeOpen {
+  0% {
+    transform: rotateX(0deg);
+    z-index: 7;
+  }
+  48% {
+    z-index: 7;
+  }
+  50% {
+    /* As flap passes vertical, shift z-index behind the emerging letter card */
+    z-index: 2;
+  }
+  100% {
+    transform: rotateX(-180deg);
+    z-index: 2;
+  }
+}
+
+/* Stage 4 & 5: Inner Letter Card Physically Slides Upward from Pocket */
+.envelope-viewport-overlay.opening .envelope-letter-card {
+  animation: letterCardEmerge 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.85s forwards;
+}
+
+@keyframes letterCardEmerge {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 4px 18px rgba(35, 23, 16, 0.15);
+  }
+  50% {
+    transform: translateY(-45%);
+    box-shadow: 0 16px 36px rgba(35, 23, 16, 0.28);
+  }
+  100% {
+    transform: translateY(-82%);
+    box-shadow: 0 24px 50px rgba(35, 23, 16, 0.35);
+  }
+}
+
+/* Stage 6: Entire Envelope Scene Gently Expands and Dissolves */
+.envelope-viewport-overlay.opening .envelope-scene {
+  animation: envelopeSceneDissolve 0.85s cubic-bezier(0.4, 0, 0.2, 1) 1.95s forwards;
+}
+
+@keyframes envelopeSceneDissolve {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.05) translateY(-25px);
     opacity: 0;
   }
 }
 
-@keyframes envelopeOpen {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  40% {
-    transform: translateY(-8px) scale(1.02);
-  }
-  100% {
-    transform: translateY(-30px) scale(1.05);
+.envelope-viewport-overlay.opening .envelope-interaction-prompt {
+  animation: promptFadeOut 0.4s ease forwards;
+}
+
+@keyframes promptFadeOut {
+  to {
     opacity: 0;
+    transform: translateY(8px);
   }
 }
 
 /* --------------------------------------------------------------------------
-   Scroll Reveal Elements
+   Scroll Reveal Elements (Refined & Luxury Pacing)
    -------------------------------------------------------------------------- */
 .fade-up {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateY(22px);
+  transition: opacity 0.85s cubic-bezier(0.25, 1, 0.5, 1), transform 0.85s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: opacity, transform;
 }
 
@@ -68,78 +129,53 @@
   opacity: 1;
 }
 
-.scale-fade {
-  opacity: 0;
-  transform: scale(0.96);
-  transition: opacity 0.85s cubic-bezier(0.25, 1, 0.5, 1), transform 0.85s cubic-bezier(0.25, 1, 0.5, 1);
-  will-change: opacity, transform;
-}
-
-.scale-fade.visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
 /* Staggered Delay Utilities */
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
+.delay-1 { transition-delay: 0.12s; }
+.delay-2 { transition-delay: 0.22s; }
+.delay-3 { transition-delay: 0.32s; }
 
 /* --------------------------------------------------------------------------
-   Subtle Luxury Ambient Motion (Restrained & Elegant)
+   Subtle Organic Movement (Restrained & Handcrafted)
    -------------------------------------------------------------------------- */
-.floral-breathe {
-  animation: floralBreathe 8s ease-in-out infinite alternate;
+.floral-gentle-breathe {
+  animation: gentleBreathe 9s ease-in-out infinite alternate;
 }
 
-@keyframes floralBreathe {
+@keyframes gentleBreathe {
   0% {
     transform: scale(1) rotate(0deg);
   }
   100% {
-    transform: scale(1.012) rotate(0.4deg);
+    transform: scale(1.014) rotate(0.4deg);
   }
-}
-
-.gold-glow {
-  position: relative;
-}
-
-.gold-glow::after {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  box-shadow: 0 0 12px rgba(196, 154, 69, 0.3);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.gold-glow:hover::after {
-  opacity: 1;
 }
 
 /* --------------------------------------------------------------------------
    prefers-reduced-motion Overrides
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
-  .envelope-overlay.opening .wax-seal-wrapper,
-  .envelope-overlay.opening .envelope-card,
-  .floral-breathe,
-  .music-toggle-floating.is-playing .music-disc,
-  .music-toggle-floating.is-playing .music-bar {
+  .envelope-viewport-overlay.opening .envelope-wax-seal,
+  .envelope-viewport-overlay.opening .envelope-top-flap,
+  .envelope-viewport-overlay.opening .envelope-letter-card,
+  .envelope-viewport-overlay.opening .envelope-scene,
+  .envelope-viewport-overlay.opening .envelope-interaction-prompt,
+  .floral-gentle-breathe,
+  .music-toggle-stationery.is-playing .music-disc-icon,
+  .music-toggle-stationery.is-playing .music-bar-line {
     animation: none !important;
   }
 
-  .fade-up,
-  .scale-fade {
+  .envelope-viewport-overlay.opening {
+    opacity: 0 !important;
+    transition: opacity 0.4s ease !important;
+  }
+
+  .fade-up {
     transform: none !important;
     transition: opacity 0.3s ease !important;
   }
 
   .fade-up.visible,
-  .scale-fade.visible,
   .fade-in.visible {
     opacity: 1 !important;
   }
